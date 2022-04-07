@@ -1,0 +1,9 @@
+version: ''
+services:
+  build_service:
+    build: java_app
+    ports:
+      - 8080:8080
+
+  prod_service:
+    image: ubuntu:18.04
