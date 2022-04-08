@@ -6,7 +6,7 @@ services:
       - java_project:/tmp/java_app/target/
 
   prod_service:
-    image: tomcat
+    image: tomcat:9.0.20-jre8-alpine
     depends_on:
       - build_service
     ports:
