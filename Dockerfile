@@ -1,2 +1,4 @@
-FROM tomcat
-RUN cp /var/java_app/apache-tomcat-10.0.20/webapps/target/*.war webapps/
+FROM maven
+WORKDIR /tmp/java_app/
+ADD ./boxfuse-sample-java-war-hello/* /tmp/java_app/
+RUN mvn package
