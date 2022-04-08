@@ -1,9 +1,9 @@
-version: '3.8'
+version: '3'
 services:
   build_service:
     build: .
     volumes:
-      - java_project:/tmp/java_app/target
+      - java_project:/tmp/java_app/target/
 
   prod_service:
     image: tomcat
@@ -12,7 +12,7 @@ services:
     ports:
       - 8090:8080
     volumes:
-      - java_project:/usr/local/tomcat/webapps
+      - java_project:/usr/local/tomcat/webapps/
 
 volumes:
   java_project:
